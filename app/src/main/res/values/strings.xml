@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TDP_Basico_posta</string>
+    <string name="text_explanation">insert the player\'\s name and press "add" to add a new player. Do it as many times as players you want to add. Press "start" when you added all the players</string>
+    <string name="boton_addPlayer">Add</string>
+    <string name="boton_start">Start</string>
+    <string name="input_name">Name</string>
+</resources>
