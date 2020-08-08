@@ -4,4 +4,7 @@
     <string name="boton_addPlayer">Add</string>
     <string name="boton_start">Start</string>
     <string name="input_name">Name</string>
+    <string name="blank">""</string>
+    <string name="boton_done">done</string>
+    <string name="boton_not_done">not done</string>
 </resources>

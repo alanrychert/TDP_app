@@ -1,1 +1,18 @@
-{}
+[
+  {
+    "description": "chupa un pito",
+    "value": "2"
+  }
+  ,{
+  "description": "chupa dos pitos",
+  "value": "3"
+  }
+  ,{
+    "description": "chupa tres pitos",
+    "value": "3"
+  }
+  ,{
+  "description": "chupa cuatro pitos",
+  "value": "3"
+}
+]
