@@ -1,18 +1,22 @@
 [
   {
-    "description": "chupa un pito",
+    "description": "Do 10 pull-ups in 10 seconds",
     "value": "2"
-  }
-  ,{
-  "description": "chupa dos pitos",
-  "value": "3"
-  }
-  ,{
-    "description": "chupa tres pitos",
+  },
+  {
+    "description": "name a yellow fruit",
+    "value": "3"
+  },
+  {
+    "description": "show everyone your first photo in your gallery",
+    "value": "3"
+  },
+  {
+    "description": "jump 5 times without falling",
+    "value": "3"
+  },
+  {
+    "description": "kiss the floor (perfect in the quarantine)",
     "value": "3"
   }
-  ,{
-  "description": "chupa cuatro pitos",
-  "value": "3"
-}
 ]

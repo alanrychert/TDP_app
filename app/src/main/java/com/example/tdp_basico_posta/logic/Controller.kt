@@ -1,22 +1,20 @@
 package com.example.tdp_basico_posta.logic
 
-import  com.example.tdp_basico_posta.ui.MainActivity
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
+import com.example.tdp_basico_posta.ui.MainActivity
 
 
 class Controller (private val main: MainActivity){
     var party:Party? = null
 
-    fun start(toParse: String){
-        val gson= Gson()
-        val itemType = object : TypeToken<List<Challenge>>() {}.type
-        val itemList = gson.fromJson<List<Challenge>>(toParse, itemType)
+    fun start(toParse: String) {
+        //val gson= Gson()
+        //val itemType = object : TypeToken<List<Challenge>>() {}.type
+        //val itemList = gson.fromJson<List<Challenge>>(toParse, itemType)
 
-        party=Party(main.names,itemList,this)
+        //party=Party(main.names,itemList)
     }
 
     fun finish(){
-        main.gameFinished(party!!.getWinner())
+        //main.gameFinished(party!!.getWinner())
     }
 }

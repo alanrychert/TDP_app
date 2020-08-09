@@ -4,33 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".ui.AddChallengeActivity">
 
     <Button
         android:id="@+id/addPlayers_done"
         android:layout_width="103dp"
         android:layout_height="81dp"
-        android:layout_marginTop="191dp"
+        android:layout_marginTop="61dp"
         android:layout_marginBottom="131dp"
         android:onClick="returnInitial"
         android:text="@string/addPlayers_doneButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="103dp"
         android:layout_height="81dp"
-        android:layout_marginTop="191dp"
+        android:layout_marginTop="61dp"
         android:layout_marginBottom="131dp"
-        android:onClick="addName"
+        android:onClick="addChallenge"
         android:text="@string/boton_addPlayer"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -41,7 +41,7 @@
         android:layout_marginEnd="99dp"
         android:autofillHints="@string/input_name"
         android:ems="10"
-        android:hint="@string/input_name"
+        android:hint="@string/input_challenge"
         android:inputType="textPersonName"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -57,7 +57,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="568dp"
-        android:text="@string/text_explanation"
+        android:text="@string/text_explanation_addChallenge"
         android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,4 +73,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintGuide_begin="205dp"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_challengeValue"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNumberDecimal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="41dp"
+        android:layout_marginBottom="278dp"
+        android:autofillHints="@string/input_value"
+        android:ems="10"
+        android:hint="@string/input_value"
+        android:inputType="numberDecimal"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 </androidx.constraintlayout.widget.ConstraintLayout>
+
