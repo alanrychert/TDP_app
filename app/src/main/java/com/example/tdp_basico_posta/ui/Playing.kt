@@ -1,8 +1,8 @@
 package com.example.tdp_basico_posta.ui
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.View.INVISIBLE
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tdp_basico_posta.R
 import com.example.tdp_basico_posta.logic.AppData
@@ -14,43 +14,46 @@ class Playing : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_playing)
-        party = Party(AppData.namesList, AppData.challengeList)
-        fillTexts()
+        party = Party(AppData.namesList, AppData.challengeList, AppData.rounds)
+        nextTurn()
     }
 
     fun donePressed(view: View) {
         if (!finished()) {
             party.actualPlayer.points += party.actualChallenge.value
-            fillTexts()
+            nextTurn()
         } else
             gameFinished()
     }
 
     fun notDonePressed(view: View) {
         if (!finished()) {
-            fillTexts()
+            nextTurn()
         } else {
             gameFinished()
         }
 
     }
 
+    fun skipChallenge(view: View) {
+        val newChallenge = party.nextChallenge()
+        textView.text = newChallenge.description
+        textView4.text = newChallenge.value.toString()
+    }
+
     private fun gameFinished() {
         val winner = party.getWinner()
-        textView2.setText(R.string.blank)
-        textView.text = "The winner is " + winner.name
-        button5.visibility = INVISIBLE
-        button6.visibility = INVISIBLE
-        textView5.visibility = INVISIBLE
-        textView4.visibility = INVISIBLE
-
+        val intent = Intent(this, WinnerActivity::class.java)
+        intent.putExtra("winner", winner.name)
+        startActivity(intent)
+        finish()
     }
 
     private fun finished(): Boolean {
         return party.turnAmount == party.actualTurn
     }
 
-    private fun fillTexts() {
+    private fun nextTurn() {
         val actualChallenge = this.party.nextChallenge()
         textView.text = actualChallenge.description
         textView4.text = actualChallenge.value.toString()

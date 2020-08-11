@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TDP_Basico_posta</string>
+    <string name="app_name">Tomalan</string>
     <string name="text_explanation">insert the player\'\s name and press "add" to add a new player. Do it as many times as players you want to add. Press "ready" when you finished adding all the players</string>
     <string name="text_explanation_addChallenge">Insert the description of the new challenge and it\'\s value. Do it as many times as challenges you want to add. Press "ready" when you finished adding all the challenges </string>
     <string name="boton_addPlayer">Add</string>
@@ -8,12 +8,21 @@
     <string name="input_challenge">Description</string>
     <string name="text_challengeValue">Value:</string>
     <string name="input_value">0</string>
-    <string name="text_value">Value:</string>
+    <string name="text_value">Drinks:</string>
     <string name="blank">""</string>
     <string name="boton_done">done</string>
     <string name="boton_not_done">not done</string>
+    <string name="text_rounds_amount">Please enter the amount of rounds you want to play</string>
+    <string name="input_round_amount">3</string>
+    <string name="button_round_amounts">OK</string>
+    <string name="input_0">The amount of rounds must be higher than 0</string>
+    <string name="playing_skip_challenge"> Skip </string>
     <string name="welcome">Welcome! Before start playing, add as many players as you want.\n If you want, you can add personalized challenges too.\n Press start when you are ready</string>
-    <string name="ini_addPlayerButton">Add Players</string>
+    <string name="ini_addPlayerButton">Add\nPlayers</string>
     <string name="ini_addChallengeButton">Add Challenges</string>
     <string name="ini_startPlayingButton">Let\'\s Start!</string>
+    <string name="no_players">You must add at least 1 player</string>
+    <string name="incomplete_info">At least one of the fields is blank or contain a non valid character</string>
+    <string name="winner_finishButton">Finish</string>
+    <string name="winner_restartButton">Restart</string>
 </resources>

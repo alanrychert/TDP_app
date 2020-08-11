@@ -6,8 +6,13 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.tdp_basico_posta.R
 import com.example.tdp_basico_posta.logic.AppData
 import com.example.tdp_basico_posta.logic.Challenge
+import com.google.android.material.snackbar.BaseTransientBottomBar
+import com.google.android.material.snackbar.Snackbar
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_addchallenge.*
 import kotlinx.android.synthetic.main.activity_main.editTextTextPersonName
+import java.io.IOException
 
 
 class AddChallengeActivity : AppCompatActivity() {
@@ -17,6 +22,24 @@ class AddChallengeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_addchallenge)
     }
 
+    fun chargeFile(fileName: String) {
+        var jsonChallenges: String = ""
+        try {
+            val archivo = applicationContext.assets.open(fileName)
+            jsonChallenges = archivo.bufferedReader().use { it.readText() }
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        val gson = Gson()
+        val itemType = object : TypeToken<List<Challenge>>() {}.type
+        val itemList = gson.fromJson<List<Challenge>>(jsonChallenges, itemType)
+
+        for (challenge in itemList) {
+            AppData.addChallenge(challenge)
+        }
+    }
+
+
     fun addChallenge(view: View) {
         if (editTextTextPersonName.text.isNotEmpty() && editTextTextPersonName.text.isNotBlank() && editTextNumberDecimal.text.isNotEmpty() && editTextNumberDecimal.text.isNotBlank()) {
             val description = editTextTextPersonName.text.toString()
@@ -25,9 +48,13 @@ class AddChallengeActivity : AppCompatActivity() {
             AppData.addChallenge(challenge)
             editTextTextPersonName.text.clear()
             editTextNumberDecimal.text.clear()
+        } else {
+            val mySnackbar = Snackbar.make(
+                view, R.string.incomplete_info,
+                BaseTransientBottomBar.LENGTH_SHORT
+            )
+            mySnackbar.show()
         }
-
-        //names.add(name)
     }
 
 

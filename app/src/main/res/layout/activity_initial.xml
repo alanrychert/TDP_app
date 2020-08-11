@@ -8,41 +8,42 @@
 
     <Button
         android:id="@+id/initial_addPlayerButton"
-        android:layout_width="136dp"
-        android:layout_height="54dp"
+        android:layout_width="121dp"
+        android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="64dp"
         android:onClick="goAddPlayer"
         android:text="@string/ini_addPlayerButton"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/initial_startPlayingButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/initial_addChallengeButton"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
+        app:layout_constraintTop_toBottomOf="@+id/initial_welcomeText"
+        app:layout_constraintVertical_bias="0.602" />
 
     <Button
         android:id="@+id/initial_addChallengeButton"
-        android:layout_width="142dp"
-        android:layout_height="wrap_content"
+        android:layout_width="121dp"
+        android:layout_height="60dp"
         android:layout_marginStart="64dp"
         android:layout_marginEnd="24dp"
         android:onClick="goAddChallenge"
         android:text="@string/ini_addChallengeButton"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/initial_startPlayingButton"
         app:layout_constraintEnd_toStartOf="@+id/initial_addPlayerButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.503" />
+        app:layout_constraintTop_toBottomOf="@+id/initial_welcomeText"
+        app:layout_constraintVertical_bias="0.602" />
 
     <TextView
         android:id="@+id/initial_welcomeText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="58dp"
+        android:layout_marginTop="96dp"
         android:text="@string/welcome"
         android:textAlignment="center"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -58,4 +59,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/initial_welcomeText" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="45dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:drawable/ic_menu_help"
+        android:text="@string/blank"
+        app:layout_constraintBottom_toTopOf="@+id/initial_welcomeText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.956"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.312" />
 </androidx.constraintlayout.widget.ConstraintLayout>

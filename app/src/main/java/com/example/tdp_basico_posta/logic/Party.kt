@@ -3,9 +3,13 @@ package com.example.tdp_basico_posta.logic
 import kotlin.random.Random
 
 //data class Party (var names : ArrayList<String>,private val challenges: List<Challenge>, val controller: Controller){
-data class Party(var names: ArrayList<String>, private val challenges: MutableList<Challenge>) {
+data class Party(
+    val names: ArrayList<String>,
+    private val challenges: MutableList<Challenge>,
+    val rounds: Int = 4
+) {
     private val players = ArrayList<Player>()
-    var turnAmount: Int = players.size * 3
+    var turnAmount: Int = names.size * rounds
     var actualTurn: Int = 0
     var actualPlayer = Player("")
     var actualChallenge = challenges[Random.nextInt(challenges.size)]
@@ -15,7 +19,6 @@ data class Party(var names: ArrayList<String>, private val challenges: MutableLi
             players.add(Player(it))
         }
         actualPlayer = players.first()
-        turnAmount = players.size * 3
     }
 
 
