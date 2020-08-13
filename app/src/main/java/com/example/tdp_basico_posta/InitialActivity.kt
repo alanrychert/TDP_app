@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.tdp_basico_posta.logic.AppData
 import com.example.tdp_basico_posta.logic.Challenge
 import com.example.tdp_basico_posta.ui.AddChallengeActivity
+import com.example.tdp_basico_posta.ui.InstructionsActivity
 import com.example.tdp_basico_posta.ui.MainActivity
 import com.example.tdp_basico_posta.ui.RoundsActivity
 import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_SHORT
@@ -16,12 +17,16 @@ import com.google.gson.reflect.TypeToken
 import java.io.IOException
 
 class InitialActivity : AppCompatActivity() {
+    /*
+    Reads all the challenges from the challenges JSON file and add them to AppData
+     */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_initial)
+        val fileName = getString(R.string.file_name)
         var jsonChallenges: String = ""
         try {
-            val archivo = applicationContext.assets.open("Challenges.JSON")
+            val archivo = applicationContext.assets.open(fileName)
             jsonChallenges = archivo.bufferedReader().use { it.readText() }
         } catch (e: IOException) {
             e.printStackTrace()
@@ -35,16 +40,34 @@ class InitialActivity : AppCompatActivity() {
         }
     }
 
+    /**
+     * Starts AddPlayerActivity
+     */
     fun goAddPlayer(view: View) {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 
+    /**
+     * Starts AddChallengeActivity
+     */
     fun goAddChallenge(view: View) {
         val intent = Intent(this, AddChallengeActivity::class.java)
         startActivity(intent)
     }
 
+    /**
+     * Starts InstructionsActivity
+     */
+    fun goInstructions(view: View) {
+        val intent = Intent(this, InstructionsActivity::class.java)
+        startActivity(intent)
+    }
+
+    /**
+     * Starts RoundsActivity
+     * if the user did not add at least 1 player shows a snackbar with the advice
+     */
     fun start(view: View) {
         if (AppData.namesList.isNotEmpty()) {
             val intent = Intent(this, RoundsActivity::class.java)

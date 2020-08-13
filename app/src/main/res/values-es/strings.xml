@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Tomalan</string>
+    <string name="file_name">Challenges_es.JSON</string>
+    <string name="text_explanation">Ingresá el nombre del jugador y presioná "añadir" para añadirlo.\n Podés hacerlo tantas veces como jugadores quieras agregar.\n Presioná listo cuando termines.</string>
+    <string name="text_explanation_addChallenge">Ingresa la descripción del nuevo desafío y su valor.\n Podés hacerlo tantas veces como desafíos quieras agregar.\n Presioná listo cuando termines. </string>
+    <string name="boton_addPlayer">Añadir</string>
+    <string name="addPlayers_doneButton">Listo</string>
+    <string name="input_name">Nombre</string>
+    <string name="input_challenge">Descripción</string>
+    <string name="text_challengeValue">Valor:</string>
+    <string name="input_value">0</string>
+    <string name="text_value">Tragos:</string>
+    <string name="blank">""</string>
+    <string name="boton_done">Hecho</string>
+    <string name="boton_not_done">No hecho</string>
+    <string name="text_rounds_amount">Por favor ingresa la cantidad de rondas de la partida</string>
+    <string name="input_round_amount">3</string>
+    <string name="button_round_amounts">OK</string>
+    <string name="input_0">La cantidad de rondas debe ser mayor a 0</string>
+    <string name="playing_skip_challenge"> Saltear </string>
+    <string name="player_turn">Turno de: %1$s</string>
+    <string name="welcome">Hola! Antes de empezar a jugar añadí tantos jugadores como quieras.\n Si querés, podés añadir desafíos personalizados también\n Presioná empezar cuando estés listo</string>
+    <string name="ini_addPlayerButton">Añadir\njugadores</string>
+    <string name="ini_addChallengeButton">Añadir\ndesafíos</string>
+    <string name="ini_startPlayingButton">Empezar</string>
+    <string name="no_players">Tenés que añadir al menos 1 jugador</string>
+    <string name="incomplete_info">Al menos 1 de los campos está vacío o contiene carácteres no permitidos</string>
+    <string name="winner_finishButton">Inicio</string>
+    <string name="winner_restartButton">Reiniciar</string>
+    <string name="winner_is">El ganador es: %1$s </string>
+    <string name="text_instructionsTitle">Instrucciones</string>
+    <string name="text_instructions">La idea principal de este juego es disfrutar la noche. El juego consiste en desafíos, que tienen un valor en tragos. Cada vez que completas un desafío tenés que tomar la cantidad de tragos que éste indique</string>
+    <string name="text_instructionsEnd">Disfruten la joda!</string>
+</resources>

@@ -16,6 +16,11 @@ class RoundsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rounds)
     }
 
+    /**
+     * Gets the amount of rounds from the editText and set that amount of rounds in AppData
+     * if the input is 0 shows a snackbar with the advice, and if the input is blank or
+     *  null sets 3
+     */
     fun setRoundsAmount(view: View) {
         val intent = Intent(this, Playing::class.java)
         val input = editTextNumber.text
