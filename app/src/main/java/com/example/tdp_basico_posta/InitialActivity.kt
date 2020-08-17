@@ -17,9 +17,11 @@ import com.google.gson.reflect.TypeToken
 import java.io.IOException
 
 class InitialActivity : AppCompatActivity() {
+
     /*
     Reads all the challenges from the challenges JSON file and add them to AppData
-     */
+    */
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_initial)

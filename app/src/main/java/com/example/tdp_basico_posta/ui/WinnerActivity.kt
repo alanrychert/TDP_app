@@ -10,6 +10,7 @@ import com.example.tdp_basico_posta.logic.AppData
 import kotlinx.android.synthetic.main.activity_winner.*
 
 class WinnerActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_winner)

@@ -9,19 +9,33 @@
         android:roundIcon="@mipmap/app_icon"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.InstructionsActivity"></activity>
-        <activity android:name=".ui.RoundsActivity" />
-        <activity android:name=".ui.WinnerActivity" />
-        <activity android:name=".InitialActivity">
+        <activity
+            android:name=".ui.InstructionsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RoundsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.WinnerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InitialActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.Playing" />
-        <activity android:name=".ui.AddChallengeActivity" />
-        <activity android:name=".ui.MainActivity" />
+        <activity
+            android:name=".ui.Playing"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AddChallengeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MainActivity"
+            android:screenOrientation="portrait" />
     </application>
 
 </manifest>

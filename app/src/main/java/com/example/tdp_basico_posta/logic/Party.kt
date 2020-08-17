@@ -2,11 +2,11 @@ package com.example.tdp_basico_posta.logic
 
 import kotlin.random.Random
 
-//data class Party (var names : ArrayList<String>,private val challenges: List<Challenge>, val controller: Controller){
-data class Party(
-    val names: ArrayList<String>,
+
+class Party(
+    private val names: ArrayList<String>,
     private val challenges: MutableList<Challenge>,
-    val rounds: Int = 4
+    private val rounds: Int = 3
 ) {
     private val players = ArrayList<Player>()
     var turnAmount: Int = names.size * rounds

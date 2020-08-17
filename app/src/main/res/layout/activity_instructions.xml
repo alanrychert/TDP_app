@@ -12,7 +12,7 @@
         android:layout_height="39dp"
         android:background="@android:drawable/btn_dialog"
         android:onClick="returnInitial"
-        app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/scrollView2" />
 
     <ScrollView
@@ -43,12 +43,10 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="36sp"
                 android:textStyle="bold"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView9"
@@ -57,6 +55,7 @@
                 android:layout_marginStart="25dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginEnd="25dp"
+                android:layout_marginBottom="80dp"
                 android:lineSpacingExtra="18sp"
                 android:text="@string/text_instructions"
                 android:textAlignment="center"
@@ -74,6 +73,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:layout_marginBottom="50dp"
                 android:text="@string/text_instructionsEnd"
                 android:textColor="@color/colorPrimary"
                 android:textSize="36sp"
