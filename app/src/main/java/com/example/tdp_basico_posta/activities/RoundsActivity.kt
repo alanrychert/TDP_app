@@ -23,6 +23,7 @@ class RoundsActivity : AppCompatActivity() {
      */
     fun setRoundsAmount(view: View) {
         val intent = Intent(this, Playing::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
         val input = rounds_numberEditText.text
         if (!input.isNullOrBlank() and input.isNotEmpty()) {
             if (input.toString().toInt() == 0) {

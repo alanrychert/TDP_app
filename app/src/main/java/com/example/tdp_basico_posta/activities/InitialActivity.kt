@@ -70,7 +70,6 @@ class InitialActivity : AppCompatActivity() {
     fun start(view: View) {
         if (AppData.namesList.size >= 2) {
             val intent = Intent(this, RoundsActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             //finish()
         } else {
