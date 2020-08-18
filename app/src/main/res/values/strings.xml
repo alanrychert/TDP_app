@@ -24,8 +24,8 @@
     <string name="ini_addChallengeButton">Add\nChallenges</string>
     <string name="ini_startPlayingButton">Let\'\s Start!</string>
     <string name="no_players">You must add at least 2 players</string>
-    <string name="large_name">The name is too large</string>
-    <string name="large_description">The description is too large</string>
+    <string name="large_name">The name is too long</string>
+    <string name="large_description">The description is too long</string>
     <string name="incomplete_info">At least one of the fields is blank or contain a non valid character</string>
     <string name="winner_finishButton">Finish</string>
     <string name="winner_restartButton">Restart</string>

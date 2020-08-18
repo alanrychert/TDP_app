@@ -51,7 +51,7 @@ class AddPlayerActivity : AppCompatActivity() {
                 }
                 nameText.clear()
             } else {
-                Toast.makeText(this, "The name is too large", LENGTH_SHORT).show()
+                Toast.makeText(this, R.string.large_name, LENGTH_SHORT).show()
             }
         } else {
             val mySnackbar = Snackbar.make(
