@@ -4,19 +4,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.InstructionsActivity">
+    tools:context=".activities.InstructionsActivity">
 
     <Button
-        android:id="@+id/button10"
+        android:id="@+id/instructions_closeButton"
         android:layout_width="41dp"
         android:layout_height="39dp"
         android:background="@android:drawable/btn_dialog"
         android:onClick="returnInitial"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+        app:layout_constraintTop_toTopOf="@+id/instructions_scrollView" />
 
     <ScrollView
-        android:id="@+id/scrollView2"
+        android:id="@+id/instructions_scrollView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="1dp"
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView8"
+                android:id="@+id/instructions_titleTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="79dp"
@@ -49,7 +49,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/textView9"
+                android:id="@+id/instructions_explanationTextView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="25dp"
@@ -65,11 +65,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView8"
+                app:layout_constraintTop_toBottomOf="@+id/instructions_titleTextView"
                 app:layout_constraintVertical_bias="0.0" />
 
             <TextView
-                android:id="@+id/textView10"
+                android:id="@+id/instructions_enjoyPartyTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -81,7 +81,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                app:layout_constraintTop_toBottomOf="@+id/instructions_explanationTextView"
                 app:layout_constraintVertical_bias="0.387" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

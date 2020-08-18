@@ -10,16 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.InstructionsActivity"
+            android:name=".activities.InstructionsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.RoundsActivity"
+            android:name=".activities.RoundsActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.WinnerActivity"
+            android:name=".activities.WinnerActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".InitialActivity"
+            android:name=".activities.InitialActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,13 +28,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.Playing"
+            android:name=".activities.Playing"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.AddChallengeActivity"
+            android:name=".activities.AddChallengeActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".activities.AddPlayerActivity"
             android:screenOrientation="portrait" />
     </application>
 

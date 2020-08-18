@@ -4,9 +4,9 @@ import kotlin.random.Random
 
 
 class Party(
-    private val names: ArrayList<String>,
+    names: ArrayList<String>,
     private val challenges: MutableList<Challenge>,
-    private val rounds: Int = 3
+    rounds: Int = 3
 ) {
     private val players = ArrayList<Player>()
     var turnAmount: Int = names.size * rounds
@@ -21,7 +21,9 @@ class Party(
         actualPlayer = players.first()
     }
 
-
+    /*
+    Returns the next player
+     */
     fun nextPlayer(): Player {
         val next = players[actualTurn % players.size]
         actualTurn++
@@ -29,6 +31,9 @@ class Party(
         return next
     }
 
+    /*
+    Returns the next challenge
+     */
     fun nextChallenge(): Challenge {
         val random = Random
         val index = random.nextInt(challenges.size)
@@ -37,11 +42,14 @@ class Party(
         return actualChallenge
     }
 
-    fun getWinner(): Player{
-        var winner:Player =players.first()
-        for (i in 1 until players.size){
-            if (players[i].points>winner.points)
-                winner=players[i]
+    /*
+    Returns the winner of the game
+     */
+    fun getWinner(): Player {
+        var winner: Player = players.first()
+        for (i in 1 until players.size) {
+            if (players[i].points > winner.points)
+                winner = players[i]
         }
         return winner
     }

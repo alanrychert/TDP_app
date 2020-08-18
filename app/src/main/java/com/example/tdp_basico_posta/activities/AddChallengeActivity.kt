@@ -1,18 +1,16 @@
-package com.example.tdp_basico_posta.ui
+package com.example.tdp_basico_posta.activities
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tdp_basico_posta.R
 import com.example.tdp_basico_posta.logic.AppData
 import com.example.tdp_basico_posta.logic.Challenge
 import com.google.android.material.snackbar.BaseTransientBottomBar
 import com.google.android.material.snackbar.Snackbar
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 import kotlinx.android.synthetic.main.activity_addchallenge.*
-import kotlinx.android.synthetic.main.activity_main.editTextTextPersonName
-import java.io.IOException
 
 
 class AddChallengeActivity : AppCompatActivity() {
@@ -22,32 +20,24 @@ class AddChallengeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_addchallenge)
     }
 
-    fun chargeFile(fileName: String) {
-        var jsonChallenges: String = ""
-        try {
-            val archivo = applicationContext.assets.open(fileName)
-            jsonChallenges = archivo.bufferedReader().use { it.readText() }
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        val gson = Gson()
-        val itemType = object : TypeToken<List<Challenge>>() {}.type
-        val itemList = gson.fromJson<List<Challenge>>(jsonChallenges, itemType)
-
-        for (challenge in itemList) {
-            AppData.addChallenge(challenge)
-        }
-    }
-
-
+    /*
+    Adds a new challenge if the editTexts are not empty or blank and the description's length is <=100
+    in any other case shows a message with de correct advice
+     */
     fun addChallenge(view: View) {
-        if (editTextTextPersonName.text.isNotEmpty() && editTextTextPersonName.text.isNotBlank() && editTextNumberDecimal.text.isNotEmpty() && editTextNumberDecimal.text.isNotBlank()) {
-            val description = editTextTextPersonName.text.toString()
-            val value = editTextNumberDecimal.text.toString().toInt()
+        val descriptText = addChallenge_descriptionEditText.text
+        val valueText = addChallenge_valueEditText.text
+        if (descriptText.isNotEmpty() && descriptText.isNotBlank() && valueText.isNotEmpty() && valueText.isNotBlank()) {
+            val description = descriptText.toString()
+            val value = valueText.toString().toInt()
             val challenge = Challenge(description, value)
-            AppData.addChallenge(challenge)
-            editTextTextPersonName.text.clear()
-            editTextNumberDecimal.text.clear()
+            if (description.length <= 100) {
+                AppData.addChallenge(challenge)
+                descriptText.clear()
+                valueText.clear()
+            } else {
+                Toast.makeText(this, R.string.large_description, LENGTH_SHORT).show()
+            }
         } else {
             val mySnackbar = Snackbar.make(
                 view, R.string.incomplete_info,
@@ -58,6 +48,9 @@ class AddChallengeActivity : AppCompatActivity() {
     }
 
 
+    /*
+    Returns to the initial Activity
+     */
     fun returnInitial(view: View) {
         //val intent= Intent(this, InitialActivity::class.java)
         //startActivity(intent)

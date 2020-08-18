@@ -1,10 +1,9 @@
-package com.example.tdp_basico_posta.ui
+package com.example.tdp_basico_posta.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.tdp_basico_posta.InitialActivity
 import com.example.tdp_basico_posta.R
 import com.example.tdp_basico_posta.logic.AppData
 import kotlinx.android.synthetic.main.activity_winner.*
@@ -16,7 +15,8 @@ class WinnerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_winner)
         val winnerNameText = intent.getStringExtra("winner")
         if (winnerNameText != null) {
-            textView6.text = String.format(getString(R.string.winner_is), winnerNameText)
+            winner_winnerNameTextView.text =
+                String.format(getString(R.string.winner_is), winnerNameText)
         }
     }
 

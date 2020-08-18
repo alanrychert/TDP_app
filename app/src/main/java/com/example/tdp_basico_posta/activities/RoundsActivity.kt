@@ -1,4 +1,4 @@
-package com.example.tdp_basico_posta.ui
+package com.example.tdp_basico_posta.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,15 +16,15 @@ class RoundsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_rounds)
     }
 
-    /**
+    /*
      * Gets the amount of rounds from the editText and set that amount of rounds in AppData
      * if the input is 0 shows a snackbar with the advice, and if the input is blank or
      *  null sets 3
      */
     fun setRoundsAmount(view: View) {
         val intent = Intent(this, Playing::class.java)
-        val input = editTextNumber.text
-        if (!input.isNullOrBlank() and !input.isEmpty()) {
+        val input = rounds_numberEditText.text
+        if (!input.isNullOrBlank() and input.isNotEmpty()) {
             if (input.toString().toInt() == 0) {
                 val mySnackbar = Snackbar.make(
                     view,
@@ -33,7 +33,7 @@ class RoundsActivity : AppCompatActivity() {
                 )
                 mySnackbar.show()
             } else {
-                AppData.rounds = editTextNumber.text.toString().toInt()
+                AppData.rounds = rounds_numberEditText.text.toString().toInt()
                 startActivity(intent)
                 finish()
             }

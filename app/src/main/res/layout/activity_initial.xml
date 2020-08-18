@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InitialActivity">
+    tools:context=".activities.InitialActivity">
 
     <Button
         android:id="@+id/initial_addPlayerButton"
-        android:layout_width="121dp"
+        android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
@@ -26,7 +26,7 @@
 
     <Button
         android:id="@+id/initial_addChallengeButton"
-        android:layout_width="121dp"
+        android:layout_width="120dp"
         android:layout_height="60dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="20dp"
@@ -74,7 +74,7 @@
         app:layout_constraintVertical_bias="0.916" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/initial_goInstructionsButton"
         android:layout_width="56dp"
         android:layout_height="46dp"
         android:layout_marginTop="10dp"

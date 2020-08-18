@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.MainActivity">
+    tools:context=".activities.AddPlayerActivity">
 
     <Button
-        android:id="@+id/addPlayers_done"
+        android:id="@+id/addPlayer_doneButton"
         android:layout_width="78dp"
         android:layout_height="46dp"
         android:layout_marginStart="5dp"
@@ -21,11 +21,11 @@
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintTop_toBottomOf="@+id/text_explanation" />
+        app:layout_constraintStart_toEndOf="@+id/addPlayer_nameEditText"
+        app:layout_constraintTop_toBottomOf="@+id/addPlayer_ExplanationTextView" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addPlayer_readyButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -41,7 +41,7 @@
         app:layout_constraintTop_toBottomOf="@+id/my_recycler_view" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/addPlayer_nameEditText"
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         android:layout_marginStart="64dp"
@@ -53,22 +53,22 @@
         android:textAlignment="center"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
-        app:layout_constraintEnd_toStartOf="@+id/addPlayers_done"
+        app:layout_constraintEnd_toStartOf="@+id/addPlayer_doneButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_explanation" />
+        app:layout_constraintTop_toBottomOf="@+id/addPlayer_ExplanationTextView" />
 
     <TextView
-        android:id="@+id/text_explanation"
+        android:id="@+id/addPlayer_ExplanationTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="30dp"
         android:text="@string/text_explanation"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/addPlayers_done"
+        app:layout_constraintBottom_toTopOf="@+id/addPlayer_doneButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -93,7 +93,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/addPlayer_readyButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline4" />

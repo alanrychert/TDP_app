@@ -1,4 +1,4 @@
-package com.example.tdp_basico_posta.ui
+package com.example.tdp_basico_posta.activities
 
 import android.os.Bundle
 import android.view.View

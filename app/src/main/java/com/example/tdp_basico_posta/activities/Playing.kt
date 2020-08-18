@@ -1,4 +1,4 @@
-package com.example.tdp_basico_posta.ui
+package com.example.tdp_basico_posta.activities
 
 import android.content.Intent
 import android.os.Bundle
@@ -13,7 +13,7 @@ class Playing : AppCompatActivity() {
     lateinit var party: Party
 
     /*
-    Creates a new party with the names of the players and the challenges.
+    Creates the activity, sets the layout and creates a new party with the names of the players and the challenges.
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,8 +50,8 @@ class Playing : AppCompatActivity() {
      */
     fun skipChallenge(view: View) {
         val newChallenge = party.nextChallenge()
-        textView.text = newChallenge.description
-        textView4.text = newChallenge.value.toString()
+        playing_challengeTextView.text = newChallenge.description
+        playing_drinksNumberTextView.text = newChallenge.value.toString()
     }
 
     /*
@@ -78,9 +78,9 @@ class Playing : AppCompatActivity() {
     private fun nextTurn() {
         val actualChallenge = this.party.nextChallenge()
         val playerName = this.party.nextPlayer().name
-        textView.text = actualChallenge.description
-        textView4.text = actualChallenge.value.toString()
-        textView2.text = String.format(getString(R.string.player_turn), playerName)
+        playing_challengeTextView.text = actualChallenge.description
+        playing_drinksNumberTextView.text = actualChallenge.value.toString()
+        playing_playerTurnTextView.text = String.format(getString(R.string.player_turn), playerName)
     }
 
     /*
@@ -89,17 +89,5 @@ class Playing : AppCompatActivity() {
     override fun onBackPressed() {
 
     }
-/*
-    fun donePressed(view: View){
-        textView.text=controller?.party?.nextChallenge()!!.description
-        controller?.party?.nextPlayer()?.points =
-            controller?.party?.nextPlayer()?.points?.plus(controller?.party?.nextChallenge()!!.value)!!
-    }
 
-    fun notDonePressed(view:View){
-        textView.text=controller?.party?.nextChallenge()!!.description
-        controller?.party?.nextPlayer()
-    }
-
- */
 }

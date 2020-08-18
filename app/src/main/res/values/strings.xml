@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">Tomalan</string>
     <string name="file_name">Challenges.JSON</string>
-    <string name="text_explanation">Insert the player\'\s name and press "add" to add a new player. Do it as many times as players you want to add. Press "ready" when you finished adding all the players</string>
-    <string name="text_explanation_addChallenge">Insert the description of the new challenge and it\'\s value. Do it as many times as challenges you want to add. Press "ready" when you finished adding all the challenges </string>
+    <string name="text_explanation">Insert the player\'\s name (20 letters max) and press "add" to add a new player. Do it as many times as players you want to add. Press "ready" when you finished adding all the players</string>
+    <string name="text_explanation_addChallenge">Insert the description of the new challenge (100 letters max) and it\'\s value. Do it as many times as challenges you want to add. Press "ready" when you finished adding all the challenges </string>
     <string name="boton_addPlayer">Add</string>
     <string name="addPlayers_doneButton">Ready</string>
     <string name="input_name">Name</string>
@@ -23,7 +23,9 @@
     <string name="ini_addPlayerButton">Add\nPlayers</string>
     <string name="ini_addChallengeButton">Add\nChallenges</string>
     <string name="ini_startPlayingButton">Let\'\s Start!</string>
-    <string name="no_players">You must add at least 1 player</string>
+    <string name="no_players">You must add at least 2 players</string>
+    <string name="large_name">The name is too large</string>
+    <string name="large_description">The description is too large</string>
     <string name="incomplete_info">At least one of the fields is blank or contain a non valid character</string>
     <string name="winner_finishButton">Finish</string>
     <string name="winner_restartButton">Restart</string>
@@ -31,4 +33,5 @@
     <string name="text_instructionsTitle">Instructions</string>
     <string name="text_instructions">The main idea of this game is to get drunk. This game is about challenges. Every challenge has a value of drinks, so when you complete it, you drink that amount of drinks.</string>
     <string name="text_instructionsEnd">Enjoy your party!</string>
+    <string name="same_name">There is a player with that name already</string>
 </resources>

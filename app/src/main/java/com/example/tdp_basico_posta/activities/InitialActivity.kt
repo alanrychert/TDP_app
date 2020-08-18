@@ -1,15 +1,12 @@
-package com.example.tdp_basico_posta
+package com.example.tdp_basico_posta.activities
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.example.tdp_basico_posta.R
 import com.example.tdp_basico_posta.logic.AppData
 import com.example.tdp_basico_posta.logic.Challenge
-import com.example.tdp_basico_posta.ui.AddChallengeActivity
-import com.example.tdp_basico_posta.ui.InstructionsActivity
-import com.example.tdp_basico_posta.ui.MainActivity
-import com.example.tdp_basico_posta.ui.RoundsActivity
 import com.google.android.material.snackbar.BaseTransientBottomBar.LENGTH_SHORT
 import com.google.android.material.snackbar.Snackbar
 import com.google.gson.Gson
@@ -42,15 +39,15 @@ class InitialActivity : AppCompatActivity() {
         }
     }
 
-    /**
+    /*
      * Starts AddPlayerActivity
      */
     fun goAddPlayer(view: View) {
-        val intent = Intent(this, MainActivity::class.java)
+        val intent = Intent(this, AddPlayerActivity::class.java)
         startActivity(intent)
     }
 
-    /**
+    /*
      * Starts AddChallengeActivity
      */
     fun goAddChallenge(view: View) {
@@ -58,7 +55,7 @@ class InitialActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    /**
+    /*
      * Starts InstructionsActivity
      */
     fun goInstructions(view: View) {
@@ -66,17 +63,21 @@ class InitialActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
-    /**
+    /*
      * Starts RoundsActivity
      * if the user did not add at least 1 player shows a snackbar with the advice
      */
     fun start(view: View) {
-        if (AppData.namesList.isNotEmpty()) {
+        if (AppData.namesList.size >= 2) {
             val intent = Intent(this, RoundsActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
             //finish()
         } else {
-            val mySnackbar = Snackbar.make(view, R.string.no_players, LENGTH_SHORT)
+            val mySnackbar = Snackbar.make(
+                view,
+                R.string.no_players, LENGTH_SHORT
+            )
             mySnackbar.show()
         }
     }

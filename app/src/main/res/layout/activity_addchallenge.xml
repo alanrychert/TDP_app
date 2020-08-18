@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.AddChallengeActivity">
+    tools:context=".activities.AddChallengeActivity">
 
     <Button
-        android:id="@+id/addPlayers_done"
+        android:id="@+id/addChallenge_doneButton"
         android:layout_width="103dp"
         android:layout_height="81dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginBottom="131dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/default_button_animator"
         android:fontFamily="@font/droid_serif"
         android:onClick="addChallenge"
@@ -20,14 +20,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/guideline2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal" />
+        app:layout_constraintTop_toBottomOf="@+id/addChallenge_valueEditText" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/addChallenge_readyButton"
         android:layout_width="103dp"
         android:layout_height="81dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginBottom="131dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/default_button_animator"
         android:fontFamily="@font/droid_serif"
         android:onClick="returnInitial"
@@ -37,11 +37,10 @@
         app:layout_constraintEnd_toStartOf="@+id/guideline2"
         app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNumberDecimal"
-        app:layout_constraintVertical_bias="0.6" />
+        app:layout_constraintTop_toBottomOf="@+id/addChallenge_valueEditText" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/addChallenge_descriptionEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="48dp"
@@ -54,23 +53,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_explanation" />
+        app:layout_constraintTop_toBottomOf="@+id/addChallenge_ExplanationTextView" />
 
     <TextView
-        android:id="@+id/text_explanation"
+        android:id="@+id/addChallenge_ExplanationTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="150dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="30dp"
-        android:layout_marginBottom="568dp"
         android:text="@string/text_explanation_addChallenge"
         android:textAlignment="center"
         android:textColor="@android:color/black"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -84,34 +80,34 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/addChallenge_valueTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="@string/text_challengeValue"
         android:textColor="@android:color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintTop_toBottomOf="@+id/addChallenge_descriptionEditText"
+        app:layout_constraintVertical_bias="0.0" />
 
     <EditText
-        android:id="@+id/editTextNumberDecimal"
+        android:id="@+id/addChallenge_valueEditText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="278dp"
+        android:layout_marginTop="20dp"
         android:autofillHints="@string/input_value"
         android:ems="10"
         android:hint="@string/input_value"
         android:inputType="number"
         android:textAlignment="center"
         android:textColor="@android:color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/addChallenge_valueTextView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
